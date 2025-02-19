@@ -1,0 +1,132 @@
+<html>
+	<head>
+		<title>Strains</title>
+		<link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+	</head>
+	<body>
+		<header>
+			<h1> Microorganisms Database</h1>
+		</header>
+		<nav>	
+			<a href="index.html" class="homebtn">Home</a>
+			<a href="strains.html">Strains</a>
+			<a href="species.html">Species</a>
+			<a href="strainTypes.html">Strain Types</a>
+			<a href="freezerLocations.html">Freezer Locations</a>
+			<a href="freezerRecords.html">Freezer Records</a>
+			<a href="growthConditions.html">Growth Conditions</a>
+			<a href="growthRecords.html">Strain Growth Records</a>
+		</nav>
+		<main>
+			<section>
+				<h2>Freezer Storage Records</h2>
+				<table>
+					<!-- <caption>Collection of Strains</caption> -->
+					<thead>
+						<!-- Top row -->
+						<tr>
+							<!-- Column names -->
+							<th></th> 
+							<th></th> 
+							<th>ID</th>
+							<th>Strain Name</th>
+							<th>Freezer Location</th>
+							<th>Quantity</th>
+							<th>Date Stored</th>
+							<th>Notes</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- Item rows -->
+						<tr>
+							<td><a href=""></a>Delete</td> <!-- delete button -->
+							<td><a href=""></a>Edit</td> <!-- edit button -->
+							<td>1</td>
+							<td>USA300</td>
+							<td>Main Lab Freezer</td>
+							<td>10</td>
+							<td>2025-02-13 20:36:08</td>
+							<td>Stored in cryovials</td>
+						</tr>
+						<tr>
+							<td><a href=""></a>Delete</td> 
+							<td><a href=""></a>Edit</td> 
+							<td>2</td> 
+							<td>K-12</td> 
+							<td>Backup Freezer</td> 
+							<td>5</td>
+							<td>2025-02-13 20:36:08</td>
+							<td>Backup stock</td>
+						</tr>
+						<tr>
+							<td><a href=""></a>Delete</td> 
+							<td><a href=""></a>Edit</td> 
+							<td>3</td>
+							<td>168</td> 
+							<td>Cold Room</td> 
+							<td>20</td> 
+							<td>2025-02-13 20:36:08</td>
+							<td>Long-term storage</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<!-- add form -->
+				<form action="">
+					<fieldset>
+						<legend><strong>Add storage record</strong></legend>
+
+						<div>
+							<label for="">Strain:</label>
+							<select id="" name="">
+								<option value=""></option>
+								<option value="">USA300</option>
+								<option value="">K-12</option>
+								<option value="">168</option>
+							</select>
+						</div>
+						<div>
+							<label for="">Freezer:</label>
+							<select id="" name="">
+								<option value=""></option>
+								<option value="">Main Lab Freezer</option>
+								<option value="">Backup Freezer</option>
+								<option value="">Cold Room</option>
+							</select>
+						<div>
+							<label for="">Quantity:</label>
+							<input type="number" id="" name=""
+								min="0">
+						</div>
+						</div>
+							<label for="">Notes:</label><br>
+							<textarea id="" name=""
+								placeholder="Enter notes"
+							></textarea>
+
+					</fieldset>
+					<input type="submit" value="Add">
+					<input type="button" value="Cancel">
+				</form> 
+
+				<!-- delete form -->
+				<form action="">
+					<fieldset>
+						<legend><strong>Delete storage recored</strong></legend>
+						<p>Are you sure you wish to delete the following?</p>
+						<label>ID:</label> 1 &nbsp;
+						<label> Strain: </label> USA300
+						<label> Freezer Location: </label>
+						<label> Date stored: </label> 2025-02-13 20:36:08
+					</fieldset>
+					<input class="btn" type="submit"  value="Delete" id="">
+					<input class="btn" type="button" value="Cancel">
+				</form>
+
+			</section>
+		</main>
+		<footer>
+			Winter 2025
+		</footer>
+	</body>
+</html>

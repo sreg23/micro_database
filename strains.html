@@ -1,0 +1,164 @@
+<html>
+	<head>
+		<title>Strains</title>
+		<link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+	</head>
+	<body>
+		<header>
+			<h1> Microorganisms Database</h1>
+		</header>
+		<nav>	
+			<a href="index.html" class="homebtn">Home</a>
+			<a href="strains.html">Strains</a>
+			<a href="species.html">Species</a>
+			<a href="strainTypes.html">Strain Types</a>
+			<a href="freezerLocations.html">Freezer Locations</a>
+			<a href="freezerRecords.html">Freezer Records</a>
+			<a href="growthConditions.html">Growth Conditions</a>
+			<a href="growthRecords.html">Strain Growth Records</a>
+		</nav>
+		<main>
+			<section>
+				<h2>Strains</h2>
+				<table>
+					<!-- <caption>Collection of Strains</caption> -->
+					<thead>
+						<!-- Top row -->
+						<tr>
+							<!-- Column names -->
+							<th></th> 
+							<th></th> 
+							<th>ID</th>
+							<th>Name</th>
+							<th>Species</th>
+							<th>Strain type</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- Item rows -->
+						<tr>
+							<td><a href=""></a>Delete</td> <!-- delete button -->
+							<td><a href=""></a>Edit</td> <!-- edit button -->
+							<td>1</td> <!-- id -->
+							<td>USA300</td> <!-- name -->
+							<td>Staphylococcus aureus</td> <!-- species -->
+							<td>Wild Type</td> <!-- strain type -->
+							<td>Highly virulent MRSA strain</td> <!-- description -->
+						</tr>
+						<tr>
+							<td><a href=""></a>Delete</td> 
+							<td><a href=""></a>Edit</td> 
+							<td>2</td> 
+							<td>K-12</td> 
+							<td>Escherichia coli</td> 
+							<td>Genetically Modified</td>
+							<td>Common laboratory E. coli strain</td> 
+						</tr>
+						<tr>
+							<td><a href=""></a>Delete</td> 
+							<td><a href=""></a>Edit</td> 
+							<td>3</td>
+							<td>168</td> 
+							<td>Bacillus subtilis</td> 
+							<td>Wild Type</td> 
+							<td>Widely used B. subtilis strain</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<!-- add form -->
+				<form action="">
+					<fieldset>
+						<legend><strong>Add strain</strong></legend>
+						
+						<div>
+							<label for="">Name:</label>
+							<input type="text" id="" name="">
+						</div>
+						<div>
+							<label for="">Species:</label>
+							<select id="" name="">
+								<option value=""></option>
+								<option value="">Staphylococcus aureus</option>
+								<option value="">Escherichia coli</option>
+								<option value="">Bacillus subtilis</option>
+							</select>
+						</div>
+						<div>
+							<label for="">Strain Type:</label>
+							<select id="" name="">
+								<option value=""></option>
+								<option value="">Wild Type</option>
+								<option value="">Genetically Modified</option>
+								<option value="">Mutant</option>
+							</select>
+						</div>
+							<label for="">Description:</label><br>
+							<textarea id="" name=""
+								placeholder="Enter description"
+							></textarea>
+
+					</fieldset>
+					<input type="submit" value="Add">
+					<input type="button" value="Cancel">
+				</form> 
+
+				<!-- update form -->
+				<form action="">
+					<fieldset>
+						<legend><strong>Update strain</strong></legend>
+
+          	<label>ID:</label> 1
+						<div>
+							<label for="">Name:</label>
+							<input type="text" id="" name=""
+							placeholder="USA300">
+						</div>
+						<div>
+							<label for="">Species:</label>
+							<select id="" name="">
+								<option value=""></option>
+								<option value="">Staphylococcus aureus</option>
+								<option value="">Escherichia coli</option>
+								<option value="">Bacillus subtilis</option>
+							</select>
+						</div>
+						<div>
+							<label for="">Strain Type:</label>
+							<select id="" name="">
+								<option value=""></option>
+								<option value="">Wild Type</option>
+								<option value="">Genetically Modified</option>
+								<option value="">Mutant</option>
+							</select>
+						</div>
+							<label for="">Description:</label><br>
+							<textarea id="" name=""
+								placeholder="Highly virulent MRSA strain"
+							></textarea>
+    			</fieldset>
+    			<input type="submit" value="Update">
+          <input type="button" value="Cancel">
+
+				</form>
+
+				<!-- delete form -->
+				<form action="">
+          <fieldset>
+						<legend><strong>Delete strain</strong></legend>
+          	<p>Are you sure you wish to delete the following?</p>
+          	<label>ID:</label> 1 &nbsp;
+            <label> Name: </label> USA300
+    			</fieldset>
+    			<input class="btn" type="submit"  value="Delete" id="">
+          <input class="btn" type="button" value="Cancel">
+				</form>
+
+			</section>
+		</main>
+		<footer>
+			Winter 2025
+		</footer>
+	</body>
+</html>

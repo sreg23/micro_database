@@ -1,0 +1,110 @@
+<html>
+	<head>
+		<title>Strains</title>
+		<link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+	</head>
+	<body>
+		<header>
+			<h1> Microorganisms Database</h1>
+		</header>
+		<nav>	
+			<a href="index.html" class="homebtn">Home</a>
+			<a href="strains.html">Strains</a>
+			<a href="species.html">Species</a>
+			<a href="strainTypes.html">Strain Types</a>
+			<a href="freezerLocations.html">Freezer Locations</a>
+			<a href="freezerRecords.html">Freezer Records</a>
+			<a href="growthConditions.html">Growth Conditions</a>
+			<a href="growthRecords.html">Strain Growth Records</a>
+		</nav>
+		<main>
+			<section>
+				<h2>Strain Growth Records</h2>
+				<table>
+					<!-- <caption>Collection of Strains</caption> -->
+					<thead>
+						<!-- Top row -->
+						<tr>
+							<!-- Column names -->
+							<th></th> 
+							<th></th> 
+							<th>ID</th>
+							<th>Strain</th>
+							<th>Growth Medium</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- Item rows -->
+						<tr>
+							<td><a href=""></a>Delete</td> <!-- delete button -->
+							<td><a href=""></a>Edit</td> <!-- edit button -->
+							<td>1</td>
+							<td>USA300</td>
+							<td>LB Broth</td>
+						</tr>
+						<tr>
+							<td><a href=""></a>Delete</td> 
+							<td><a href=""></a>Edit</td> 
+							<td>2</td> 
+							<td>K-12</td> 
+							<td>M9 Minimal Medium</td> 
+						</tr>
+						<tr>
+							<td><a href=""></a>Delete</td> 
+							<td><a href=""></a>Edit</td> 
+							<td>3</td>
+							<td>168</td> 
+							<td>Nutrient Agar</td> 
+						</tr>
+					</tbody>
+				</table>
+
+				<!-- add form -->
+				<form action="">
+					<fieldset>
+						<legend><strong>Add strain growth record</strong></legend>
+					
+						<div>
+							<label for="">Strain:</label>
+							<select id="" name="">
+								<option value=""></option>
+								<option value="">USA300</option>
+								<option value="">K-12</option>
+								<option value="">168</option>
+							</select>
+						</div>
+						<div>
+							<label for="">Growth condition:</label>
+							<select id="" name="">
+								<option value=""></option>
+								<option value="">LB Broth</option>
+								<option value="">Nutrient Agar</option>
+								<option value="">M9 Minimal Medium</option>
+							</select>
+						</div>
+
+					</fieldset>
+					<input type="submit" value="Add">
+					<input type="button" value="Cancel">
+				</form> 
+
+				<!-- delete form -->
+				<form action="">
+					<fieldset>
+						<legend><strong>Delete strain growth record</strong></legend>
+						<p>Are you sure you wish to delete the following?</p>
+						<label>ID:</label> 1 &nbsp;
+						<label> Stain: </label> USA300 &nbsp;
+						<label> Medium: </label> LB Broth
+					</fieldset>
+					<input class="btn" type="submit"  value="Delete" id="">
+					<input class="btn" type="button" value="Cancel">
+				</form>	
+
+			</section>
+		</main>
+		<footer>
+			Winter 2025
+		</footer>
+	</body>
+</html>

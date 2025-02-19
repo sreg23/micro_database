@@ -1,0 +1,158 @@
+<html>
+	<head>
+		<title>Strains</title>
+		<link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+	</head>
+	<body>
+		<header>
+			<h1> Microorganisms Database</h1>
+		</header>
+		<nav>	
+			<a href="index.html" class="homebtn">Home</a>
+			<a href="strains.html">Strains</a>
+			<a href="species.html">Species</a>
+			<a href="strainTypes.html">Strain Types</a>
+			<a href="freezerLocations.html">Freezer Locations</a>
+			<a href="freezerRecords.html">Freezer Records</a>
+			<a href="growthConditions.html">Growth Conditions</a>
+			<a href="growthRecords.html">Strain Growth Records</a>
+		</nav>
+		<main>
+			<section>
+				<h2>Growth Conditions</h2>
+				<table>
+					<thead>
+						<!-- Top row -->
+						<tr>
+							<!-- Column names -->
+							<th></th> 
+							<th></th> 
+							<th>ID</th>
+							<th>Temperature</th>
+							<th>Medium</th>
+							<th>Humidity</th>
+							<th>Notes</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- Item rows -->
+						<tr>
+							<td><a href=""></a>Delete</td> <!-- delete button -->
+							<td><a href=""></a>Edit</td> <!-- edit button -->
+							<td>1</td>
+							<td>37.00</td>
+							<td>LB Broth</td>
+							<td>60.00</td>
+							<td>Optimal for bacterial growth</td>
+						</tr>
+						<tr>
+							<td><a href=""></a>Delete</td> 
+							<td><a href=""></a>Edit</td> 
+							<td>2</td> 
+							<td>30.00</td> 
+							<td>Nutrient Agar</td> 
+							<td></td>
+							<td>Used for sporulation studies</td> 
+						</tr>
+						<tr>
+							<td><a href=""></a>Delete</td> 
+							<td><a href=""></a>Edit</td> 
+							<td>3</td>
+							<td>25.00</td> 
+							<td>M9 Minimal Medium</td> 
+							<td>50.00</td> 
+							<td>For selective pressure experiments</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<!-- add form -->
+				<form action="">
+					<fieldset>
+						<legend><strong>Add growth condition</strong></legend>
+						
+						<div>
+							<label for="">Name:</label>
+							<input type="text" id="" name="">
+						</div>
+						<div>
+							<label for="">Temperature:</label>
+							<input type="number" id="" name=""
+								step=.01>
+						</div>
+						<div>
+							<label for="">Medium:</label>
+							<input type="text" id="" name="">
+						</div>
+						<div>
+							<label for="">Humidity:</label>
+							<input type="number" id="" name=""
+								step=.01>
+						</div>
+						</div>
+							<label for="">Notes:</label><br>
+							<textarea id="" name=""
+								placeholder="Enter notes"
+							></textarea>
+
+					</fieldset>
+					<input type="submit" value="Add">
+					<input type="button" value="Cancel">
+				</form> 
+
+				<!-- update form -->
+				<form action="">
+					<fieldset>
+						<legend><strong>Update growth condition</strong></legend>
+
+          	<label>ID:</label> 1
+						<div>
+							<label for="">Name:</label>
+							<input type="text" id="" name="">
+						</div>
+						<div>
+							<label for="">Temperature:</label>
+							<input type="number" id="" name=""
+								step=.01>
+						</div>
+						<div>
+							<label for="">Medium:</label>
+							<input type="text" id="" name="">
+						</div>
+						<div>
+							<label for="">Humidity:</label>
+							<input type="number" id="" name=""
+								step=.01>
+						</div>
+						</div>
+							<label for="">Notes:</label><br>
+							<textarea id="" name=""
+								placeholder="Enter notes"
+							></textarea>
+    			</fieldset>
+    			<input type="submit" value="Update">
+          <input type="button" value="Cancel">
+
+				</form>
+
+				<!-- delete form -->
+				<form action="">
+          <fieldset>
+						<legend><strong>Delete growth condition</strong></legend>
+          	<p>Are you sure you wish to delete the following?</p>
+          	<label>ID:</label> 1 &nbsp;
+            <label>Temperature:</label> 37.00
+						<label>Medium:</label> LB Broth
+    			</fieldset>
+    			<input class="btn" type="submit"  value="Delete" id="">
+          <input class="btn" type="button" value="Cancel">
+				</form>
+
+
+			</section>
+		</main>
+		<footer>
+			Winter 2025
+		</footer>
+	</body>
+</html>

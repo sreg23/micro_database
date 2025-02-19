@@ -1,0 +1,199 @@
+
+
+/*   ----- Imports  -----  */
+  /* @import url(//fonts.googleapis.com/css?family=Font+Name); Add fonts from a hosted services like Google Fonts.   */
+	@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Lexend+Deca:wght@100..900&family=Monomaniac+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Viga&display=swap');
+
+/*   ----- Variables  -----  */
+:root {
+	--header-blue:#345cfa;
+	--header-grey: #4b4b4b;
+	--menu-grey:#d6d6d6;
+	--menu-white:#ffffff;
+	--border-grey: #535252;
+	--font-black:#171717;
+	--font-grey:#444343;
+	--font-white:#ffffff;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Poppins", serif;
+  	font-weight: 400;
+  	font-style: normal;
+
+	/* flexbox code needed for sticky footer */
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+/*   ----- Header and Navigation bar  -----  */
+header {
+	background-color: var(--header-blue);
+	color: var(--font-white);
+	width: 100%;
+	height: 50px; /* should be the same as main's margin-top */
+
+	/* position: fixed; 
+	top: 0;
+	left: 0; */
+}
+header h1 {
+	margin: 0; /* remove default margins from h1 */
+	padding: 8px 0 0 24px; /* FORMAT: top, right, bottom, left */
+	font-size: 24px;
+	font-family: "Monomaniac One", serif;
+	font-weight: 400;
+	font-style: normal;
+}
+nav {
+	/* position: absolute;
+	bottom: 0; */
+	background-color: var(--menu-grey);
+	border: 2px solid var(--border-grey);
+	padding: 10px; /* will change size of bar */
+	text-align: center;
+}
+/* Padding in 'nav' AND 'nav a' should be the same if you want buttons to be the height of the nav bar */
+nav a {
+	color: var(--font-black);
+	padding: 12px 24px; /* should be the same as 'nav' padding ? */
+
+	font-size: 14px; 
+	font-family: "Viga", serif;
+  font-weight: 400;
+  font-style: normal;
+	text-decoration: none;
+}
+nav a:visited {
+	/* color: var(--font-black);	 */
+}
+nav a:hover {
+	background-color: var(--menu-white);
+	color: var(--font-black);
+
+	border: 2px solid var(--border-grey);
+	margin: -2px;
+}
+
+/*   ----- Main  -----  */
+main {
+	/* margin-top: 100px;  */
+	/* border: 2px solid red; */
+}
+section {
+	margin: 0% 10%;
+	padding: 20px 40px;
+	border: 1px dashed green;
+}
+article {
+	padding: 10px 30px;
+	border: 1px dashed blue;
+}
+
+/*   ----- Footer  -----  */
+footer {
+	background-color: var(--menu-grey);
+	border: 2px solid var(--border-grey);
+	padding: 4px 0px 4px 24px;  
+	font-size: 12px;
+	
+	/* flexbox code needed for sticky footer */
+	margin-top: auto;  /* put as much margin between previous element and footer */
+}
+
+
+/*  ----- Table ----- */
+table {
+	border-collapse: collapse;
+	border: 2px solid var(--border-grey);
+	width: auto
+}
+caption {
+	padding: 10px;
+}
+thead {
+	background-color: var(--header-grey);
+	color: var(--font-white);
+	text-align: center;
+}
+tbody {}
+tfoot {}
+tr { /* row */ }
+	tr:nth-child(even) {
+		background-color: var(--menu-grey);
+	}
+th { /* header element in row */
+	padding: 8px 8px;
+	font-size: 12px;
+}
+td { /* element in row */
+	padding: 8px 8px;
+	font-size: 12px;
+}
+	/* td:nth-child(1) { color: blue;} */
+	/* td:nth-child(2) { color: blue;} */
+colgroup {}
+data {}
+datalist {}
+
+
+/*  ----- Form ----- */
+form {
+	margin: 40px 0px;
+}
+fieldset {}
+  legend {
+		border: 1px solid var(--border-grey);
+		padding: 5px 10px;
+	}
+label {
+	margin: 5px;
+}
+button {
+	margin: 5px;
+	padding: 5px;
+}
+input {
+	margin: 5px;
+	padding: 5px;
+}
+select {
+	margin: 5px;
+	padding: 5px;
+}
+  optgroup {}
+  option {}
+textarea {
+	height: 60px;
+	width: 80%;
+	margin: 5px;
+  padding: 5px;
+}
+output {}
+meter {}
+progress {}
+
+fieldset p {
+	margin: 10px;
+}
+
+/*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+.center {
+	text-align: center;
+}
+.flex-container {
+	display: flex;
+	justify-content: center;
+}
+
+.homebtn {
+	background-color: var(--header-grey);
+	color: var(--font-white);
+	border: 2px solid var(--header-grey);
+}
+
+
+

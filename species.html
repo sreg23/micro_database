@@ -1,0 +1,119 @@
+<html>
+	<head>
+		<title>Species</title>
+		<link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+	</head>
+	<body>
+		<header>
+			<h1> Microorganisms Database</h1>
+		</header>
+		<nav>	
+			<a href="index.html" class="homebtn">Home</a>
+			<a href="strains.html">Strains</a>
+			<a href="species.html">Species</a>
+			<a href="strainTypes.html">Strain Types</a>
+			<a href="freezerLocations.html">Freezer Locations</a>
+			<a href="freezerRecords.html">Freezer Records</a>
+			<a href="growthConditions.html">Growth Conditions</a>
+			<a href="growthRecords.html">Strain Growth Records</a>
+		</nav>
+		<main>
+			<section>
+				<h2>Species</h2>
+				<table>
+					<thead>
+						<!-- Top row -->
+						<tr>
+							<!-- Column names -->
+							<th></th> 
+							<th></th> 
+							<th>ID</th>
+							<th>Species Name</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- Item rows -->
+						<tr>
+							<td><a href=""></a>Delete</td> <!-- delete button -->
+							<td><a href=""></a>Edit</td> <!-- edit button -->
+							<td>1</td> <!-- id -->
+							<td>Staphylococcus aureus</td> <!-- species -->
+							<td>Gram-positive bacterium, common human pathogen</td> <!-- description -->
+						</tr>
+						<tr>
+							<td><a href=""></a>Delete</td> 
+							<td><a href=""></a>Edit</td> 
+							<td>2</td> 
+							<td>Escherichia coli</td> 
+							<td>Gram-negative, found in intestines of humans and animals</td> 
+						</tr>
+						<tr>
+							<td><a href=""></a>Delete</td> 
+							<td><a href=""></a>Edit</td> 
+							<td>3</td>
+							<td>Bacillus subtilis</td> 
+							<td>Gram-positive, soil bacterium used in research</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<!-- add form -->
+				<form action="">
+					<fieldset>
+						<legend><strong>Add species</strong></legend>
+						
+						<div>
+							<label for="">Species name:</label>
+							<input type="text" id="" name="">
+						</div>
+							<label for="">Description:</label><br>
+							<textarea id="" name=""
+								placeholder="Enter description"
+							></textarea>
+
+					</fieldset>
+					<input type="submit" value="Add">
+					<input type="button" value="Cancel">
+				</form> 
+
+				<!-- update form -->
+				<form action="">
+					<fieldset>
+						<legend><strong>Update species</strong></legend>
+
+          	<label>ID:</label> 1
+						<div>
+							<label for="">Species name:</label>
+							<input type="text" id="" name="">
+						</div>
+							<label for="">Description:</label><br>
+							<textarea id="" name=""
+								placeholder="Enter description"
+							></textarea>
+
+    			</fieldset>
+    			<input type="submit" value="Update">
+          <input type="button" value="Cancel">
+
+				</form>
+
+				<!-- delete form -->
+				<form action="">
+          <fieldset>
+						<legend><strong>Delete species</strong></legend>
+          	<p>Are you sure you wish to delete the following?</p>
+          	<label>ID:</label> 1 &nbsp;
+            <label> Species: </label> Staphylococcus aureus
+    			</fieldset>
+    			<input class="btn" type="submit"  value="Delete" id="">
+          <input class="btn" type="button" value="Cancel">
+				</form>
+
+			</section>
+		</main>
+		<footer>
+			Winter 2025
+		</footer>
+	</body>
+</html>
