@@ -1,14 +1,15 @@
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>Strains</title>
-		<link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+		<link rel="stylesheet" type="text/css" media="screen" href="style.css">
 	</head>
 	<body>
 		<header>
 			<h1> Microorganisms Database</h1>
 		</header>
 		<nav>	
-			<a href="index.html" class="homebtn">Home</a>
+			<a href="index.html">Home</a>
 			<a href="strains.html">Strains</a>
 			<a href="species.html">Species</a>
 			<a href="strainTypes.html">Strain Types</a>
@@ -39,3 +40,16 @@
 		</footer>
 	</body>
 </html>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+	  const currentPath = window.location.pathname.split('/').pop(); // e.g., "freezerLocations.html"
+	  const navLinks = document.querySelectorAll('nav a');
+  
+	  navLinks.forEach(link => {
+		if (link.getAttribute('href') === currentPath) {
+		  link.classList.add('active'); // Apply 'active' to the current tab
+		}
+	  });
+	});
+  </script>
