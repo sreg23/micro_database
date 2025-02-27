@@ -56,6 +56,14 @@ nav {
 	padding: 10px; /* will change size of bar */
 	text-align: center;
 }
+nav a.active {
+	background-color: var(--header-blue); /* Matches the header background */
+	color: var(--font-white);             /* White text for contrast */
+	border: 2px solid var(--border-grey); /* Consistent with hover effect */
+	margin: -2px;                         /* Prevent layout shift */
+  }
+  
+
 /* Padding in 'nav' AND 'nav a' should be the same if you want buttons to be the height of the nav bar */
 nav a {
 	color: var(--font-black);
@@ -67,6 +75,7 @@ nav a {
   font-style: normal;
 	text-decoration: none;
 }
+
 nav a:visited {
 	/* color: var(--font-black);	 */
 }
