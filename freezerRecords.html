@@ -1,6 +1,7 @@
+<!DOCTYPE html>
 <html>
 	<head>
-		<title>Strains</title>
+		<title>Freezer Records</title>
 		<link rel='stylesheet' type='text/css' media='screen' href='style.css'>
 	</head>
 	<body>
@@ -72,7 +73,7 @@
 				</table>
 
 				<!-- add form -->
-				<form action="">
+				<form id="addForm" onsubmit="return handleAdd(event)">
 					<fieldset>
 						<legend><strong>Add storage record</strong></legend>
 
@@ -107,10 +108,11 @@
 					</fieldset>
 					<input type="submit" value="Add">
 					<input type="button" value="Cancel">
+					<input type="date" id="dateStored" name="dateStored">
 				</form> 
 
 				<!-- delete form -->
-				<form action="">
+				<form id="deleteForm" action="">
 					<fieldset>
 						<legend><strong>Delete storage recored</strong></legend>
 						<p>Are you sure you wish to delete the following?</p>
@@ -119,8 +121,9 @@
 						<label> Freezer Location: </label>
 						<label> Date stored: </label> 2025-02-13 20:36:08
 					</fieldset>
-					<input class="btn" type="submit"  value="Delete" id="">
-					<input class="btn" type="button" value="Cancel">
+					<input class="btn" type="submit"  value="Delete">
+					<input class="btn" type="button" value="Cancel" onclick="cancelDelete()">
+					
 				</form>
 
 			</section>
@@ -130,3 +133,32 @@
 		</footer>
 	</body>
 </html>
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+	  const currentPath = window.location.pathname.split('/').pop(); 
+	  const navLinks = document.querySelectorAll('nav a');
+  
+	  navLinks.forEach(link => {
+		if (link.getAttribute('href') === currentPath) {
+		  link.classList.add('active'); // Apply 'active' to the current tab
+		}
+	  });
+	});
+// Handle Add Form Submission
+function handleAdd(event) {
+  event.preventDefault(); // Prevent page reload
+  alert('Add form submitted successfully!'); // Will replace with actual add logic
+  clearAddForm(); // Optional: clear form after submission
+}
+
+// Clear Add Form Inputs
+function clearAddForm() {
+  document.getElementById('addForm').reset();
+}
+
+	// Cancel Delete Function - Hides the delete form
+function cancelDelete() {
+  document.getElementById('deleteForm').style.display = 'none';
+}
+
+  </script>
