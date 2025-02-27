@@ -1,110 +1,167 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Strains</title>
-		<link rel='stylesheet' type='text/css' media='screen' href='style.css'>
-	</head>
-	<body>
-		<header>
-			<h1> Microorganisms Database</h1>
-		</header>
-		<nav>	
-			<a href="index.html" class="homebtn">Home</a>
-			<a href="strains.html">Strains</a>
-			<a href="species.html">Species</a>
-			<a href="strainTypes.html">Strain Types</a>
-			<a href="freezerLocations.html">Freezer Locations</a>
-			<a href="freezerRecords.html">Freezer Records</a>
-			<a href="growthConditions.html">Growth Conditions</a>
-			<a href="growthRecords.html">Strain Growth Records</a>
-		</nav>
-		<main>
-			<section>
-				<h2>Strain Growth Records</h2>
-				<table>
-					<!-- <caption>Collection of Strains</caption> -->
-					<thead>
-						<!-- Top row -->
-						<tr>
-							<!-- Column names -->
-							<th></th> 
-							<th></th> 
-							<th>ID</th>
-							<th>Strain</th>
-							<th>Growth Medium</th>
-						</tr>
-					</thead>
-					<tbody>
-						<!-- Item rows -->
-						<tr>
-							<td><a href=""></a>Delete</td> <!-- delete button -->
-							<td><a href=""></a>Edit</td> <!-- edit button -->
-							<td>1</td>
-							<td>USA300</td>
-							<td>LB Broth</td>
-						</tr>
-						<tr>
-							<td><a href=""></a>Delete</td> 
-							<td><a href=""></a>Edit</td> 
-							<td>2</td> 
-							<td>K-12</td> 
-							<td>M9 Minimal Medium</td> 
-						</tr>
-						<tr>
-							<td><a href=""></a>Delete</td> 
-							<td><a href=""></a>Edit</td> 
-							<td>3</td>
-							<td>168</td> 
-							<td>Nutrient Agar</td> 
-						</tr>
-					</tbody>
-				</table>
+<head>
+    <title>Strain Growth Records</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+</head>
+<body>
+    <header>
+        <h1> Microorganisms Database</h1>
+    </header>
+    <nav>
+        <a href="index.html" class="homebtn">Home</a>
+        <a href="strains.html">Strains</a>
+        <a href="species.html">Species</a>
+        <a href="strainTypes.html">Strain Types</a>
+        <a href="freezerLocations.html">Freezer Locations</a>
+        <a href="freezerRecords.html">Freezer Records</a>
+        <a href="growthConditions.html">Growth Conditions</a>
+        <a href="growthRecords.html" class="active">Strain Growth Records</a>
+    </nav>
+    <main>
+        <section>
+            <h2>Strain Growth Records</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Actions</th>
+                        <th>ID</th>
+                        <th>Strain</th>
+                        <th>Growth Condition</th>
+                        <th>Date Added</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-id="1" data-strain="USA300" data-condition="1" data-date="2025-02-01">
+                        <td>
+                            <button onclick="editRecord(this)">Edit</button>
+                            <button onclick="confirmDelete(this)">Delete</button>
+                        </td>
+                        <td>1</td>
+                        <td>USA300</td>
+                        <td>LB Broth - 37°C - 60% humidity</td>
+                        <td>2025-02-01</td>
+                    </tr>
+                    <tr data-id="2" data-strain="K-12" data-condition="2" data-date="2025-02-10">
+                        <td>
+                            <button onclick="editRecord(this)">Edit</button>
+                            <button onclick="confirmDelete(this)">Delete</button>
+                        </td>
+                        <td>2</td>
+                        <td>K-12</td>
+                        <td>LB Broth - 30°C - 40% humidity</td>
+                        <td>2025-02-10</td>
+                    </tr>
+                    <tr data-id="3" data-strain="168" data-condition="3" data-date="2025-02-15">
+                        <td>
+                            <button onclick="editRecord(this)">Edit</button>
+                            <button onclick="confirmDelete(this)">Delete</button>
+                        </td>
+                        <td>3</td>
+                        <td>168</td>
+                        <td>Nutrient Agar - 25°C - 50% humidity</td>
+                        <td>2025-02-15</td>
+                    </tr>
+                </tbody>
+            </table>
 
-				<!-- add form -->
-				<form action="">
-					<fieldset>
-						<legend><strong>Add strain growth record</strong></legend>
-					
-						<div>
-							<label for="">Strain:</label>
-							<select id="" name="">
-								<option value=""></option>
-								<option value="">USA300</option>
-								<option value="">K-12</option>
-								<option value="">168</option>
-							</select>
-						</div>
-						<div>
-							<label for="">Growth condition:</label>
-							<select id="" name="">
-								<option value=""></option>
-								<option value="">LB Broth</option>
-								<option value="">Nutrient Agar</option>
-								<option value="">M9 Minimal Medium</option>
-							</select>
-						</div>
+            <!-- Add Form -->
+            <form action="">
+                <fieldset>
+                    <legend><strong>Add Strain Growth Record</strong></legend>
+                    <label>Strain:</label>
+                    <select name="strain" required>
+                        <option value="">Select a strain</option>
+                        <option value="USA300">USA300</option>
+                        <option value="K-12">K-12</option>
+                        <option value="168">168</option>
+                    </select>
+                    <label>Date Added:</label>
+                    <input type="date" name="dateAdded" placeholder="Optional">
+                    <label>Growth Condition:</label>
+                    <select name="conditionId" required>
+                        <option value="">Select a growth condition</option>
+                        <option value="1">LB Broth - 37°C - 60% humidity</option>
+                        <option value="2">LB Broth - 30°C - 40% humidity</option>
+                        <option value="3">Nutrient Agar - 25°C - 50% humidity</option>
+                    </select>
+                    <input type="submit" value="Add">
+                    <input type="button" value="Cancel">
+                </fieldset>
+            </form>
 
-					</fieldset>
-					<input type="submit" value="Add">
-					<input type="button" value="Cancel">
-				</form> 
+            <!-- Edit Form -->
+            <form id="editForm" style="display:none;">
+                <fieldset>
+                    <legend><strong>Edit Strain Growth Record</strong></legend>
+                    <label>ID:</label> <span id="edit-id"></span><br>
+                    <label>Strain:</label>
+                    <select id="edit-strain" required>
+                        <option value="USA300">USA300</option>
+                        <option value="K-12">K-12</option>
+                        <option value="168">168</option>
+                    </select><br>
+                    <label>Growth Condition:</label>
+                    <select id="edit-condition" required>
+                        <option value="1">LB Broth - 37°C - 60% humidity</option>
+                        <option value="2">LB Broth - 30°C - 40% humidity</option>
+                        <option value="3">Nutrient Agar - 25°C - 50% humidity</option>
+                    </select><br>
+                    <label>Date Added:</label>
+                    <input type="date" id="edit-date"><br>
+                    <input type="submit" value="Update">
+                    <input type="button" value="Cancel" onclick="document.getElementById('editForm').style.display='none'">
+                </fieldset>
+            </form>
 
-				<!-- delete form -->
-				<form action="">
-					<fieldset>
-						<legend><strong>Delete strain growth record</strong></legend>
-						<p>Are you sure you wish to delete the following?</p>
-						<label>ID:</label> 1 &nbsp;
-						<label> Stain: </label> USA300 &nbsp;
-						<label> Medium: </label> LB Broth
-					</fieldset>
-					<input class="btn" type="submit"  value="Delete" id="">
-					<input class="btn" type="button" value="Cancel">
-				</form>	
+            <!-- Delete Form -->
+            <form id="deleteForm" style="display:none;">
+                <fieldset>
+                    <legend><strong>Delete Strain Growth Record</strong></legend>
+                    <p>Are you sure you wish to delete the following?</p>
+                    <label>ID:</label> <span id="delete-id"></span> &nbsp;
+                    <label>Strain:</label> <span id="delete-strain"></span> &nbsp;
+                    <label>Growth Condition:</label> <span id="delete-condition"></span> &nbsp;
+                    <label>Date Added:</label> <span id="delete-date"></span>
+                    <input type="submit" value="Delete">
+                    <input type="button" value="Cancel" onclick="document.getElementById('deleteForm').style.display='none'">
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    <footer>Winter 2025</footer>
 
-			</section>
-		</main>
-		<footer>
-			Winter 2025
-		</footer>
-	</body>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentPath = window.location.pathname.split('/').pop();
+            document.querySelectorAll('nav a').forEach(link => {
+                if (link.getAttribute('href') === currentPath) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        function editRecord(button) {
+            const row = button.closest('tr');
+            document.getElementById('edit-id').textContent = row.dataset.id;
+            document.getElementById('edit-strain').value = row.dataset.strain;
+            document.getElementById('edit-condition').value = row.dataset.condition;
+            document.getElementById('edit-date').value = row.dataset.date;
+            document.getElementById('editForm').style.display = 'block';
+            window.scrollTo({ top: document.getElementById('editForm').offsetTop, behavior: 'smooth' });
+        }
+
+        function confirmDelete(button) {
+            const row = button.closest('tr');
+            document.getElementById('delete-id').textContent = row.dataset.id;
+            document.getElementById('delete-strain').textContent = row.dataset.strain;
+            document.getElementById('delete-condition').textContent = row.cells[3].innerText;
+            document.getElementById('delete-date').textContent = row.dataset.date;
+            document.getElementById('deleteForm').style.display = 'block';
+            window.scrollTo({ top: document.getElementById('deleteForm').offsetTop, behavior: 'smooth' });
+        }
+    </script>
+</body>
 </html>
+
+  
